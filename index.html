@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<head>
+		<title>html5 audio player</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div id="albumCover">
+				<img src="img/covers/cover1.jpg" alt="cover image">
+			</div>
+			<div id="songInfo">
+				<span id="albumTitle">Link Park: </span>
+				<span id="songTitle">A Place For My Head</span>
+			</div>
+			<div id="volumeControl">
+				<input id="volumeSilder" name="volumeSilder" type="range" min="0" max="100" >
+			</div>
+			<div id="controlButtonGroup">
+				<button id="prev"></button>
+				<button id="play"></button>
+				<button id="pause"></button>
+				<button id="stop"></button>
+				<button id="next"></button>
+            </div>
+            <div id="duration">
+            	<div id="barContainer">
+            		<div id="bar"></div>
+            	</div>
+            	<div id="time">00:00</div>
+            </div>
+            <div id="playList">
+            	<ul>
+            		<li class="active" song="" cover="cover1.jpg" artist="Link Park"> A Place For My Head</li>
+            		<li song="" cover="cover1.jpg" artist="Link Park"> By Myself</li>
+            		<li song="" cover="cover1.jpg" artist="Link Park"> Crawling</li>
+            		<li song="" cover="cover1.jpg" artist="Link Park"> Cure For The Itch</li>
+            		<li song="" cover="cover1.jpg" artist="Link Park"> Forgotten</li>
+            		<li song="" cover="cover1.jpg" artist="Link Park"> In The End</li>
+            		<li song="" cover="cover1.jpg" artist="Link Park"> One Step Closer</li>
+            		<li song="" cover="cover1.jpg" artist="Link Park"> Papercut</li>
+            	</ul>
+            </div>
+		</div>
+	</body>
+</html>

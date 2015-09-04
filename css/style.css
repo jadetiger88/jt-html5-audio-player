@@ -45,21 +45,26 @@
   }
 
   #volumeControl {
-  	height: 10px;
+  	height: 30px;
+    line-height: 30px;
   	width: 80%;
    	margin-right: auto;
   	margin-left: auto;
  }
 
-   #volumeControl input {
-  	width: 100%;
+  #volumeControl .fa-volume-up {
+    width:8%%;
+  }
+
+  #volumeControl input {
+    width:90%;
   }
 
   #controlButtonGroup {
   	height: 100px;
   	line-height: 100px;
- 	width: 80%;
- 	margin: 50px auto 0 auto;
+ 	  width: 80%;
+ 	  margin: 50px auto 0 auto;
   }
 
    #controlButtonGroup button{
@@ -135,11 +140,11 @@
  	text-align: center;
  }
 
-#playList {
+#playlist {
 	margin: 50px 20px;
 }
 
-#playList li {
+#playlist li {
 	list-style: none;
 	margin: 2px 5px;
 	padding: 2px 10px;
@@ -147,8 +152,8 @@
 	font-size: 12px;
 }
 
-#playList li:active, 
-#playList li.active
+#playlist li:active, 
+#playlist li.active
 {
 	background-color: #888;
 }

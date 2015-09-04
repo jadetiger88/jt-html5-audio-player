@@ -45,6 +45,16 @@ $(document).ready(function() {
 		audio.volume = parseFloat(this.value/100); 
 	})
 
+	$('#durationSilder').mousedown(function() {
+		audioPause();
+	});
+
+	$('#durationSilder').mouseup(function() {
+		audio.currentTime = (audio.duration*this.value/100); 
+		audioPlay();
+	});
+
+
 	$('#playlist li').click(function() {
 
 		// change the active class
@@ -74,8 +84,8 @@ function audioPause() {
 }
 
 function audioStop() {
-	audio.currentTime = 0; 
 	audioPause();
+	audio.currentTime = 0; 
 }
 
 function formatTime(seconds) {
@@ -106,6 +116,7 @@ function showProgress() {
 	}
 
 	$('#bar').css('width', value+"%"); 
+	$('#durationSilder').val(value);
 }
 
 function setupAudioPlayer(element) {

@@ -17,10 +17,6 @@
 				<span id="albumTitle">Link Park: </span>
 				<span id="songTitle">A Place For My Head</span>
 			</div>
-			<div id="volumeControl">
-				<i class="fa fa-volume-up pull-left"></i>
-				<input  id="volumeSilder" name="volumeSilder" type="range" min="0" max="100" >
-			</div>
 			<div id="controlButtonGroup">
 				<button id="prev"></button>
 				<button id="play"></button>
@@ -28,12 +24,21 @@
 				<button id="stop"></button>
 				<button id="next"></button>
             </div>
-            <div id="duration">
-            	<div id="barContainer">
-            		<div id="bar"></div>
-            	</div>
+            <div id="durationControl"> 
+	            <div id="durationSliderContainer">           	
+					<i class="fa fa-fast-backward pull-left"></i>
+					<input  id="durationSilder" class="pull-left" name="durationSilder" type="range" min="0" max="100" >
+					<i class="fa fa-fast-forward pull-left"></i>
+				</div>
             	<div id="time">00:00</div>
             </div>
+			<div id="volumeControl">
+	            <div id="volumeSliderContainer">           	
+					<i class="fa fa-volume-off pull-left"></i>
+					<input  id="volumeSilder" class="pull-left" name=" volumeSilder" type="range" min="0" max="100" >
+					<i class="fa fa-volume-up pull-left"></i>
+				</div>
+			</div>
             <div id="playlist">
             	<ul>
             		<li class="active" song="" cover="cover1.jpg" artist="Link Park">A Place For My Head</li>

@@ -44,27 +44,11 @@
   	font-weight: bold;
   }
 
-  #volumeControl {
-  	height: 30px;
-    line-height: 30px;
-  	width: 80%;
-   	margin-right: auto;
-  	margin-left: auto;
- }
-
-  #volumeControl .fa-volume-up {
-    width:8%%;
-  }
-
-  #volumeControl input {
-    width:90%;
-  }
-
   #controlButtonGroup {
   	height: 100px;
   	line-height: 100px;
  	  width: 80%;
- 	  margin: 50px auto 0 auto;
+ 	  margin: 25px auto 0 auto;
   }
 
    #controlButtonGroup button{
@@ -79,7 +63,7 @@
   	background-position: center;
   	width: 23.5%;
   	height: 70px; 
- 	margin-top: 15px;
+ 	  margin-top: 15px;
   	background-color: #626262;
   }
 
@@ -98,7 +82,7 @@
   	display: none;
   }
 
-      #controlButtonGroup #stop {
+  #controlButtonGroup #stop {
   	background: url(../img/stop.png) no-repeat;
   	background-position: center;
   	width: 23.5%;
@@ -113,25 +97,62 @@
   	background-color: #626262;
   }
 
-  #duration {
+  #durationControl,
+  #volumeControl {
   	width: 80%; 
    	margin: 30px auto; 
   }
 
-  #duration #barContainer {
+  /*#volumeControl {
+    height: 30px;
+    line-height: 30px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 25px;
+ }
+
+  #volumeControl .fa-volume-up {
+    width:8%%;
+  }
+
+  #volumeControl input {
+    width:90%;
+  }*/
+
+#durationSliderContainer, 
+#volumeSliderContainer {
+    height: 21px;
+  }
+
+  #durationControl .fa,
+  #volumeControl .fa {
+    width:5%%;
+    margin: 0;
+    margin-top: 2px;
+  }
+
+  #durationControl input, 
+  #volumeControl input {
+    width:86%;
+    margin-right: 5px; 
+    margin-left: 5px;
+  }
+
+  #durationControl #barContainer {
   	width: 100%; 
   	background: url(../img/progress_bg.png) no-repeat;
    	border-radius: 5px;
    	height: 10px;
    }
 
-  #duration #barContainer #bar {
+  #durationControl #barContainer #bar {
   	width: 0%;
   	height: 10px;
    	background: url(../img/progress.png) no-repeat;
   }
 
- #duration #time {
+ #durationControl #time {
  	background-color: #000;
  	border-radius: 5px;
  	padding: 5px 5px;

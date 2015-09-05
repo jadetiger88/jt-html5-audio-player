@@ -45,6 +45,16 @@ $(document).ready(function() {
 		audio.volume = parseFloat(this.value/100); 
 	})
 
+	$('.fa-volume-off').click(function() {
+		audio.volume = 0;
+		$('#volumeSilder').val(0);
+	})
+
+	$('.fa-volume-up').click(function() {
+		audio.volume = 1;
+		$('#volumeSilder').val(100);
+	})
+
 	$('#durationSilder').mousedown(function() {
 		audioPause();
 	});
@@ -53,6 +63,17 @@ $(document).ready(function() {
 		audio.currentTime = (audio.duration*this.value/100); 
 		audioPlay();
 	});
+
+	$('.fa-fast-forward').click(function() {
+		audio.currentTime = audio.duration; 
+		audioStop();
+	})
+
+	$('.fa-fast-backward').click(function() {
+		audio.currentTime = 0; 
+		audioPlay();
+	})
+
 
 
 	$('#playlist li').click(function() {
@@ -141,4 +162,5 @@ function setupAudioPlayer(element) {
 	// Init audio
 	audio = new Audio(songPrefix+title+songPostfix); 
 	$(audio).bind('loadedmetadata', showProgress); 
+	$(audio).bind('ended', audioStop); 
 }

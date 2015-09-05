@@ -58,6 +58,7 @@
    		margin: 0; 
    }
 
+
   #controlButtonGroup #prev {
   	background: url(../img/prev.png) no-repeat;
   	background-position: center;
@@ -103,22 +104,6 @@
    	margin: 30px auto; 
   }
 
-  /*#volumeControl {
-    height: 30px;
-    line-height: 30px;
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 25px;
- }
-
-  #volumeControl .fa-volume-up {
-    width:8%%;
-  }
-
-  #volumeControl input {
-    width:90%;
-  }*/
 
 #durationSliderContainer, 
 #volumeSliderContainer {
@@ -127,14 +112,19 @@
 
   #durationControl .fa,
   #volumeControl .fa {
-    width:5%%;
+    width:8%%;
     margin: 0;
     margin-top: 2px;
   }
 
+  #durationControl .fa:hover,
+  #volumeControl .fa:hover {
+    font-size: 1.2em;
+  }
+
   #durationControl input, 
   #volumeControl input {
-    width:86%;
+    width:80%;
     margin-right: 5px; 
     margin-left: 5px;
   }

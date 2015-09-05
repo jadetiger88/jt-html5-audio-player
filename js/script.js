@@ -20,25 +20,11 @@ $(document).ready(function() {
 	}); 
 
 	$('#next').click(function() {
-		audioPause(); 
-
-		var next = $('#playlist li.active').next();
-		if(next.length == 0) {
-			next = $('#playlist li:first-child');
-		}
-		setupAudioPlayer(next);
-		audioPlay();
+		audioPlayNext(); 
 	});
 
 	$('#prev').click(function() {
-		audioPause(); 
-
-		var prev = $('#playlist li.active').prev();
-		if(prev.length == 0) {
-			prev = $('#playlist li:last-child');
-		}
-		setupAudioPlayer(prev);
-		audioPlay();
+		audioPlayPrev(); 
 	});
 
 	$('#volumeSilder').change(function() {
@@ -96,17 +82,37 @@ function audioPlay() {
 	$(audio).bind('timeupdate', showProgress); 
 }
 
+function audioPlayNext() {
+	audioPause(); 
+	var next = $('#playlist li.active').next();
+	if(next.length == 0) {
+		next = $('#playlist li:first-child');
+	}
+	setupAudioPlayer(next);
+	audioPlay();
+}
+
+function audioPlayPrev() {
+	audioPause(); 
+	var prev = $('#playlist li.active').prev();
+	if(prev.length == 0) {
+		prev = $('#playlist li:last-child');
+	}
+	setupAudioPlayer(prev);
+	audioPlay();
+}
+
 function audioPause() {
+	$(audio).unbind('timeupdate', showProgress); 
 	audio.pause();
 	$('#play').show(); 
 	$('#pause').hide();
-	$(audio).unbind('timeupdate', showProgress); 
 	showProgress();	
 }
 
 function audioStop() {
-	audioPause();
 	audio.currentTime = 0; 
+	audioPause();
 }
 
 function formatTime(seconds) {
@@ -162,5 +168,5 @@ function setupAudioPlayer(element) {
 	// Init audio
 	audio = new Audio(songPrefix+title+songPostfix); 
 	$(audio).bind('loadedmetadata', showProgress); 
-	$(audio).bind('ended', audioStop); 
+	$(audio).bind('ended', audioPlayNext); 
 }

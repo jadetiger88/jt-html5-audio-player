@@ -83,7 +83,7 @@ function audioPlay() {
 }
 
 function audioPlayNext() {
-	audioPause(); 
+	audioStop(); 
 	var next = $('#playlist li.active').next();
 	if(next.length == 0) {
 		next = $('#playlist li:first-child');
@@ -93,7 +93,7 @@ function audioPlayNext() {
 }
 
 function audioPlayPrev() {
-	audioPause(); 
+	audioStop(); 
 	var prev = $('#playlist li.active').prev();
 	if(prev.length == 0) {
 		prev = $('#playlist li:last-child');

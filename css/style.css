@@ -51,12 +51,12 @@
  	  margin: 25px auto 0 auto;
   }
 
-   #controlButtonGroup button{
-   		border: 1px solid #ccc; 
-   		border-radius: 10px;
-   		background-color: #626262;
-   		margin: 0; 
-   }
+ #controlButtonGroup button{
+ 		border: 1px solid #ccc; 
+ 		border-radius: 10px;
+ 		background-color: #626262;
+ 		margin: 0; 
+ }
 
 
   #controlButtonGroup #prev {
@@ -68,14 +68,14 @@
   	background-color: #626262;
   }
 
-    #controlButtonGroup #play {
+  #controlButtonGroup #play {
   	background: url(../img/play.png) no-repeat;
   	background-position: center;
   	width: 23.5%;
   	height: 70px; 
   }
 
-      #controlButtonGroup #pause {
+  #controlButtonGroup #pause {
   	background: url(../img/pause.png) no-repeat;
   	background-position: center;
   	width: 23.5%;
@@ -129,19 +129,6 @@
     margin-left: 5px;
   }
 
-  #durationControl #barContainer {
-  	width: 100%; 
-  	background: url(../img/progress_bg.png) no-repeat;
-   	border-radius: 5px;
-   	height: 10px;
-   }
-
-  #durationControl #barContainer #bar {
-  	width: 0%;
-  	height: 10px;
-   	background: url(../img/progress.png) no-repeat;
-  }
-
  #durationControl #time {
  	background-color: #000;
  	border-radius: 5px;
@@ -163,7 +150,7 @@
 	font-size: 12px;
 }
 
-#playlist li:active, 
+#playlist li:hover, 
 #playlist li.active
 {
 	background-color: #888;

@@ -52,7 +52,7 @@ $(document).ready(function() {
 
 	$('.fa-fast-forward').click(function() {
 		audio.currentTime = audio.duration; 
-		audioStop();
+		audioPause();
 	})
 
 	$('.fa-fast-backward').click(function() {
